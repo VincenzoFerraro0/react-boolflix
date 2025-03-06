@@ -1,28 +1,21 @@
-
-import { useGlobalContext } from "../context/GlobalContext"
-
+import { useGlobalContext } from "../context/GlobalContext";
 
 export default function Search() {
-
-    const { setQuery, handleSearch } = useGlobalContext();
-
-
+    const { setQuery, isSearching } = useGlobalContext();
 
     return (
-
-        <div >
-            <form onSubmit={handleSearch} >
+        <div className="relative">
+            <form onSubmit={isSearching} className="flex items-center bg-gray-900 rounded-md overflow-hidden">
                 <input
                     type="text"
                     onChange={e => setQuery(e.target.value)}
-                    
                     placeholder="Cerca..."
+                    className="bg-transparent text-white px-4 py-2 focus:outline-none w-64"
                 />
-                <button type="submit" >
+                <button type="submit" className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white">
                     Cerca
                 </button>
             </form>
         </div>
-
-    )
-};
+    );
+}

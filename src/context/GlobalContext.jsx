@@ -15,7 +15,7 @@ const GlobalProvider = ({ children }) => {
     const [movies, setMovies] =useState([])
     const [tvSeries, setTvSeies] =useState([])
 
-    const handleSearch = (e) =>{
+    const isSearching = (e) =>{
         e.preventDefault(); // Evita il refresh della pagina
 
         //https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&query=ritorno+al+futuro
@@ -36,7 +36,7 @@ const GlobalProvider = ({ children }) => {
     // Valori condivisi nel contesto globale
     const value = {
         setQuery,
-        handleSearch,
+        isSearching,
         movies,
         tvSeries
     };

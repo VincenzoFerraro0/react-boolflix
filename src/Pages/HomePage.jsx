@@ -1,9 +1,18 @@
-import Main from "../Sections/Main";
 
-export default function () {
+import ResultMovies from "../Sections/ResultMovies";
+import ResultSeries from "../Sections/ResultSeries";
+import SectionPopular from "../Sections/SectionPopular";
+import TopRated from "../Sections/TopRated";
+import UpComing from "../Sections/UpComing";
+
+export default function HomePage() {
     return (
         <>
-            <Main/>
+           <ResultMovies />
+            <ResultSeries />
+            <SectionPopular />
+            <TopRated />
+            <UpComing />
         </>
     )
 };
