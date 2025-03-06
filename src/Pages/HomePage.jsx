@@ -1,7 +1,9 @@
+import Main from "../Sections/Main";
+
 export default function () {
     return (
         <>
-            <h1>Pagina Home </h1>
+            <Main/>
         </>
     )
 };
