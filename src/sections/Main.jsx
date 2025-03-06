@@ -7,13 +7,14 @@ export default function Main() {
 
     const { movies, tvSeries } = useGlobalContext();
 
+    console.log(movies)
     return (
         <main>
             <div>
                 <h2>Film</h2>
                 {movies.length > 0 ? (
                     movies.map((movie) => {
-                        const { id, title, original_title, original_language, vote_average } = movie
+                        const { id, title, original_title, original_language, vote_average, backdrop_path } = movie
                         return (
                             <Card
                                 key={id}
@@ -21,6 +22,7 @@ export default function Main() {
                                 origTitle={original_title}
                                 lang={original_language.toUpperCase()} // Converti in maiuscolo
                                 vote={vote_average}
+                                img={backdrop_path}
                             />
                             
                         )
@@ -35,7 +37,7 @@ export default function Main() {
                 <h2>Serie tv</h2>
                 {tvSeries.length > 0 ? (
                     tvSeries.map((tvShow) => {
-                        const { id, name, original_name, original_language, vote_average } = tvShow
+                        const { id, name, original_name, original_language, vote_average,backdrop_path } = tvShow
                         return (
                             <Card
                                 key={id}
@@ -43,6 +45,7 @@ export default function Main() {
                                 origTitle={original_name}
                                 lang={original_language.toUpperCase()} // Converti in maiuscolo
                                 vote={vote_average}
+                                img={backdrop_path}
                             />
                         )
                     })

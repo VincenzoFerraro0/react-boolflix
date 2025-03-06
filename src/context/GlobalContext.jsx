@@ -8,6 +8,7 @@ const GlobalProvider = ({ children }) => {
 
     const urlBase = import.meta.env.VITE_URL_BASE;
     const apiKey = import.meta.env.VITE_CHIAVE_API;
+    
 
     const [query, setQuery] = useState('');
 
