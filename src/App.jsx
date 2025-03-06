@@ -11,6 +11,7 @@ import NewPopularPage from './Pages/NewPopularPage'
 import DefaultLayout from './layout/DefaultLayout';
 // Importazione del GlobalContext per la gestione dello stato globale
 import { GlobalProvider } from './context/GlobalContext';
+import Page404 from './Pages/Page404';
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
             <Route path="/tv-shows" Component={TvPage} />
             <Route path="/movies" Component={MoviesPage} />
             <Route path="/new-popular" Component={NewPopularPage} />
+            <Route path="*" Component={ Page404} />
+
           </Route>
         </Routes>
       </BrowserRouter>
