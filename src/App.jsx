@@ -30,7 +30,6 @@ function App() {
             <Route path="/movies" Component={MoviesPage} />
             <Route path="/new-popular" Component={NewPopularPage} />
             <Route path="*" Component={ Page404} />
-
           </Route>
         </Routes>
       </BrowserRouter>

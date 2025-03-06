@@ -1,7 +1,8 @@
+
 export default function SctionPopular() {
     return (
         <section>
-            <h1>Sezione Popolari</h1>
+            <h3>Popular on</h3>
         </section>
     )
 };

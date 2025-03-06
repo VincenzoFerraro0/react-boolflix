@@ -1,4 +1,8 @@
+import ReactCountryFlag from "react-country-flag";
+
 export default function Card({ title, origTitle, lang, vote }) {
+
+    const formattedLang = lang.toUpperCase() === "EN" ? "GB" : lang.toUpperCase() === "JA" ? "JP" : lang.toUpperCase();
     return (
         <div >
             {/* Titolo */}
@@ -6,9 +10,12 @@ export default function Card({ title, origTitle, lang, vote }) {
             {/* Titolo Originale */}
             <p>{origTitle}</p>
             {/* Lingua  */}
-            <p>{lang}</p>
+            <ReactCountryFlag countryCode={formattedLang} svg />
             {/* Voto */}
             <p>{vote}</p>
+            
         </div>
+
+       
     )
 };
