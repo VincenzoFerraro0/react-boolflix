@@ -2,17 +2,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Importazione delle pagine e dei componenti necessari
 import HomePage from './Pages/HomePage';
-import TvPage from './Pages/TvPage';
+import TvsPage from './Pages/TvsPage';
 import MoviesPage from './Pages/MoviesPage'
-import NewPopularPage from './Pages/NewPopularPage'
+import AllTrending from './Pages/AllTrending';
 import Page404 from './Pages/Page404';
 
 
 // Importazione del layout di default
 import DefaultLayout from './layout/DefaultLayout';
 // Importazione del GlobalContext per la gestione dello stato globale
-import { GlobalProvider } from './context/GlobalContext';
-import { CardProvider } from './Context/CardContext';
+import { GlobalProvider } from "./Context/GlobalContext"
+
 
 
 function App() {
@@ -20,7 +20,6 @@ function App() {
   return (
     // Provider globale che avvolge tutta l'applicazione per gestire lo stato globale
     <GlobalProvider>
-      <CardProvider>
         {/* Router per gestire la navigazione tra le pagine */}
         <BrowserRouter>
           <Routes>
@@ -28,14 +27,13 @@ function App() {
             <Route Component={DefaultLayout}>
               {/* Route per la Home Page */}
               <Route path="/" Component={HomePage} />
-              <Route path="/tv-shows" Component={TvPage} />
+              <Route path="/tv-shows" Component={TvsPage} />
               <Route path="/movies" Component={MoviesPage} />
-              <Route path="/new-popular" Component={NewPopularPage} />
+              <Route path="/new-popular" Component={AllTrending } />
               <Route path="*" Component={Page404} />
             </Route>
           </Routes>
         </BrowserRouter>
-      </CardProvider>
     </GlobalProvider>
 
   )

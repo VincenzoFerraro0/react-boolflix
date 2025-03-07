@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../context/GlobalContext";
+import { useGlobalContext } from "../Context/GlobalContext"
 
 export default function Search() {
     const { setQuery, isSearching } = useGlobalContext();
