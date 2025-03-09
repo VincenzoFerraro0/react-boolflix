@@ -40,27 +40,19 @@ const GlobalProvider = ({ children }) => {
 
     // CHIAMATA API PER LA PAGINA MOVIES
     useEffect(()=>{
-        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=it&include_adult=true`)
+        axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=it`)
             .then((res)=> setMoviesList(res.data.results))
             .catch((error) => console.error("Errore nella ricerca:", error))
             //console.log(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`)
     },[])
 
-    // CHIAMATA API PER LA PAGINA TV-SHOWS
-    useEffect(()=>{
-        axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&language=it&include_adult=true`)
-            .then((res)=> setTvsList(res.data.results))
-            .catch((error) => console.error("Errore nella ricerca:", error))
-            //console.log(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}`)
-    },[])
-
 
     // CHIAMATA API PER LA PAGINA TV-SHOWS
     useEffect(()=>{
-        axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&language=it&include_adult=true`)
+        axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&language=it`)
             .then((res)=> setTvsList(res.data.results))
             .catch((error) => console.error("Errore nella ricerca:", error))
-            //console.log(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}`)
+            // console.log(`https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&language=it&include_adult=true`)
     },[])
 
     // CHIAMATA API ALL TRENDING
@@ -71,6 +63,7 @@ const GlobalProvider = ({ children }) => {
             //console.log(`https://api.themoviedb.org/3/trending/all/day?language=it&api_key=${apiKey}`)
            
     },[])
+
     // CHIAMATA API SERIE POPOLARI
     useEffect(()=>{
         axios.get(`https://api.themoviedb.org/3/tv/popular?language=it&api_key=${apiKey}`)
@@ -81,7 +74,7 @@ const GlobalProvider = ({ children }) => {
 
     // CHIAMATA API FILM POPOLARI
     useEffect(()=>{
-        axios.get(`https://api.themoviedb.org/3/movie/popular?language=IT&api_key=${apiKey}`)
+        axios.get(`https://api.themoviedb.org/3/movie/popular?language=it&api_key=${apiKey}`)
             .then((res) => setMoviesPopulars(res.data.results))
             .catch((error) => console.error("Errore nella ricerca:", error))
            //console.log(`https://api.themoviedb.org/3/movie/popular?language=IT&api_key=${apiKey}`)
@@ -92,7 +85,7 @@ const GlobalProvider = ({ children }) => {
         axios.get(` https://api.themoviedb.org/3/movie/upcoming?language=it&page=1&api_key=${apiKey}`)
             .then((res) => setMoviesUpComing(res.data.results))
             .catch((error) => console.error("Errore nella ricerca:", error))
-            console.log(` https://api.themoviedb.org/3/movie/upcoming?language=it&page=1&api_key=${apiKey}`)
+            // console.log(` https://api.themoviedb.org/3/movie/upcoming?language=it&page=1&api_key=${apiKey}`)
     },[])
 
 

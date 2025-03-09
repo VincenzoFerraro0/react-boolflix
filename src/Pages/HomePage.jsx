@@ -9,34 +9,34 @@ export default function HomePage() {
     const isSearchActive = movies.length > 0 || tvs.length > 0;
 
     return (
-        <main className="min-h-screen bg-gray-900 text-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="min-h-screen bg-gray-900 text-white pt-12 px-4">
+            <div className="max-w-7xl mx-auto lg:px-8 py-12">
                 {isSearchActive ? (
                     <>
                         <section className="mb-12">
-                            <h2 className="text-2xl font-bold mb-4">Film trovati</h2>
+                            <h2 className="text-2xl font-bold mb-4">film trovati</h2>
                             <ResultSearch type="movies" items={movies} />
                         </section>
 
                         <section  className="mb-12">
-                            <h2 className="text-2xl font-bold mb-4">Serie TV trovate</h2>
+                            <h2 className="text-2xl font-bold mb-4">serie tv trovate</h2>
                             <ResultSearch type="tvSeries" items={tvs} />
                         </section>
                     </>
                 ) : (
                     <>
-                        <section  className="mb-12">
-                            <h2 className="text-2xl font-bold mb-4">Serie TV popolari</h2>
+                        <section  className="mb-12 ">
+                            <h2 className="text-2xl font-bold mb-4">serie tv popolari</h2>
                             <ResultList type="tvSeries" items={tvsPopulars} />
                         </section>
 
                         <section  className="mb-12">
-                            <h2 className="text-2xl font-bold mb-4">Film popolari</h2>
+                            <h2 className="text-2xl font-bold mb-4">film popolari</h2>
                             <ResultList type="movies" items={moviesPopulars} />
                         </section>
 
                         <section  className="mb-12">
-                            <h2 className="text-2xl font-bold mb-4">Film in uscita</h2>
+                            <h2 className="text-2xl font-bold mb-4">prossimamente</h2>
                             <ResultList type="movies" items={moviesUpComing} />
                         </section>
                     </>
