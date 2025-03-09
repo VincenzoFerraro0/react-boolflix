@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Header from "../Sections/Header"
-import Footer from "../Sections/Footer"
+import { Footer } from "../Sections/Footer"
+
 
 
 export default function DefaultLayout() {
@@ -13,7 +14,7 @@ export default function DefaultLayout() {
             <Outlet />
             
             {/* Footer fisso per tutte le pagine */}
-            <Footer />
+            <Footer/>
             
         </>
     )

@@ -3,10 +3,10 @@ import Search from "./Search";
 
 export default function MainNav() {
     return (
-        <nav className="bg-black py-4 px-6 fixed w-full top-0 z-50">
+        <nav className="bg-black bg-opacity-90 py-4 px-6 fixed w-full top-0 z-50 shadow-lg">
             <div className="flex items-center justify-between max-w-7xl mx-auto">
                 {/* Logo del sito */}
-                <Link to="/" className="text-red-600 text-3xl font-bold">
+                <Link to="/"  className="text-red-600 text-3xl font-bold">
                     Boolflix
                 </Link>
 
