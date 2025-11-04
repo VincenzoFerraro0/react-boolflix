@@ -1,12 +1,50 @@
-# React + Vite
+# Boolflix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Boolflix è una web app che replica le funzionalità base di Netflix, realizzata con React. La piattaforma permette di esplorare un vasto catalogo di film e serie TV, con dettagli e informazioni su ogni titolo.
 
-Currently, two official plugins are available:
+## Caratteristiche Principali
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Catalogo completo di film e serie TV
+- Ricerca dinamica dei titoli
+- Visualizzazione di:
+  - Titolo in lingua originale e italiano
+  - Voto della critica
+  - Cast
+  - Trama
+  - Locandina
+  - Lingua originale con bandiera
+- Design responsive
+- Interfaccia user-friendly
+- Gestione delle API di TMDB (The Movie Database)
 
-## Expanding the ESLint configuration
+## Tecnologie Utilizzate
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- JavaScript ES6+
+- Sass/SCSS
+- Axios per le chiamate API
+- The Movie Database API
+- Bootstrap per il layout
+
+## Struttura del Progetto
+
+- **Components**: Contiene tutti i componenti React riutilizzabili
+- **Assets**: File statici come immagini e stili
+- **Services**: Gestione delle chiamate API
+- **Store**: Gestione dello stato dell'applicazione
+
+## Funzionalità
+
+- Homepage con selezione di titoli in evidenza
+- Barra di ricerca per trovare film e serie TV
+- Schede dettagliate per ogni titolo
+- Sistema di valutazione con stelle
+- Visualizzazione responsive su tutti i dispositivi
+- Gestione multilingua per i titoli
+
+## Performance
+
+- Ottimizzazione delle chiamate API
+- Lazy loading delle immagini
+- Caching dei dati
+- Gestione efficiente dello stato
