@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../Context/GlobalContext";
+import { useGlobalContext } from "../context/GlobalContext";
 import ResultSearch from "../Sections/ResultSearch";
 import ResultList from "../Sections/ResultList";
 
