@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './Pages/HomePage';
-import TvsPage from './Pages/TvsPage';
-import MoviesPage from './Pages/MoviesPage';
-import AllTrending from './Pages/AllTrending';
-import Page404 from './Pages/Page404';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import TvsPage from './pages/TvsPage';
+import MoviesPage from './pages/MoviesPage';
+import AllTrending from './pages/AllTrending';
+import Page404 from './pages/Page404';
 import DefaultLayout from './layout/DefaultLayout';
 
 
