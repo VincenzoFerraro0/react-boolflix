@@ -1,6 +1,6 @@
 import { useGlobalContext } from "../context/GlobalContext";
-import ResultSearch from "../Sections/ResultSearch";
-import ResultList from "../Sections/ResultList";
+import ResultSearch from "../sections/ResultSearch";
+import ResultList from "../sections/ResultList";
 
 export default function HomePage() {
     const { movies, tvs, tvsPopulars, moviesPopulars, moviesUpComing } = useGlobalContext();

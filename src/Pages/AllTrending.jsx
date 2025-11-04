@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../context/GlobalContext"
-import ResultList from "../Sections/ResultList";
+import ResultList from "../sections/ResultList";
 
 export default function AllTrending() {
     const { allTrending } = useGlobalContext();
