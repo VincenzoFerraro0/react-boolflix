@@ -5,12 +5,10 @@ import MoviesPage from './Pages/MoviesPage';
 import AllTrending from './Pages/AllTrending';
 import Page404 from './Pages/Page404';
 import DefaultLayout from './layout/DefaultLayout';
-import { GlobalProvider } from './context/GlobalContext';
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <GlobalProvider>
         <Routes>
           <Route Component={DefaultLayout}>
             <Route path="/" Component={HomePage} />
@@ -20,8 +18,6 @@ function App() {
             <Route path="*" Component={Page404} />
           </Route>
         </Routes>
-      </GlobalProvider>
-    </BrowserRouter>
   );
 }
 
