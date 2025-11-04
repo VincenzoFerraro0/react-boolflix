@@ -21,17 +21,15 @@ Boolflix è una web app che replica le funzionalità base di Netflix, realizzata
 
 - React.js
 - JavaScript ES6+
-- Sass/SCSS
 - Axios per le chiamate API
 - The Movie Database API
-- Bootstrap per il layout
+- TailwindCSS per il layout
 
 ## Struttura del Progetto
 
 - **Components**: Contiene tutti i componenti React riutilizzabili
 - **Assets**: File statici come immagini e stili
-- **Services**: Gestione delle chiamate API
-- **Store**: Gestione dello stato dell'applicazione
+
 
 ## Funzionalità
 
